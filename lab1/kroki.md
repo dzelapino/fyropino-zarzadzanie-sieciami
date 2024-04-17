@@ -14,20 +14,23 @@ Mają 4 routery
 
 ##### Router 1 - Dev 1
 
-ip 192.168.2.1
+ip 192.168.30.1
 nazwa Developers-1
 siec dev1
 haslo dev1admin
 
 siec dev1 jest wireless
 
-posiada ona 6 podpiętych komputerów
+posiada ona 6 podpiętych komputerów adresy są dynamiczne
 - Dev_1-1
 - Dev_1-2
 - Dev_1-3
 - Dev_1-4
 - Dev_1-5
 - Dev_1-6
+
+Router sieci jest podpięty do sieci routera Developers-2
+192.168.3.2 (Dev-1) idzie do default gateway 192.168.3.1 (Dev-2)
 
 ##### Router 2 - Dev 2
 
