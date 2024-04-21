@@ -50,18 +50,18 @@ z interfejsu g0/0 wychodzi kabel do switcha (g0/1)
 
 ##### Router 3 - Dev 3
 
-##### Router 4 - Dev 4
-
-#### Dane ich sieci
-
-ip 192.168.2.1
-nazwa Zespol_dev
-siec Siec_dev
-haslo devdevdev
+- Dev_3-1 podpięty do fa0/11, 192.168.4.11
+- Dev_3-2 podpięty do fa0/12, 192.168.4.12
+- Dev_3-3 podpięty do fa0/13, 192.168.4.13
+- Dev_3-4 podpięty do fa0/14, 192.168.4.14
+- Dev_3-5 podpięty do fa0/15, 192.168.4.15
+- Dev_3-6 podpięty do fa0/16, 192.168.4.16
+- Dev_3-7 podpięty do fa0/17, 192.168.4.17
+- Dev_3-8 podpięty do fa0/18, 192.168.4.18
 
 ### Zespół 2 - helpdesk
 
-Zespół liczy 15 osób
+Zespół liczy 12 osób
 
 ### Zespół 3 - sales
 
@@ -74,4 +74,5 @@ Zespół liczy 10 osób
 
 ## Kroki po zbudowaniu dwóch gałęzi
 
-Mamy dwa zespoły Developers-1 i Developers-2
+Mamy dwa zespoły Developers-3 i Developers-2
+Żeby mogły się nawzajem komunikować musimy ustawić next hop, jest to jakby następny skok w sieci, ustawiamy go w zakładce routing static. Następnie należy podać adres ip na który chcemy iść (czyli ten docelowy np z dev3 chcemy do dev2 więc docelowy to 192.168.3.0), maskę podsieci (255.255.255.0) i next hop (jest to adres którym jakby wchodzimy do tamtej sieci patrz router dev2 czyli podajemy 192.168.10.1). Ostatecznie aby komunikacja się powiodła druga strona musi zostać adekwatnie skonfigurowana (192.168.4.0, 255.255.255.0, 192.168.10.2).
