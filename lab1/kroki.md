@@ -105,3 +105,55 @@ Mamy dwa zespoły Developers-3 i Developers-2
 ## Komunikacja
 
 Biuro może komunikować się z każdym z zespołów (Każdy zespół zna ścieżkę do biura i biuro do każdego). Zespoły nie mogą się ze sobą komunikować, jedynym wyjątkiem są zespoły dev1 i dev2, dev1 jest podpięty do routera bezprzewodowego który należy do sieci routera dev2.
+
+## Remote access
+
+W celu umożliwienia połączenia z chmurą dodany zostaje Cloud-PT
+
+Komputer pracownika łączy się z modemem przez ethernet a modem z chmurą przez kabel telefoniczny
+
+Wchodzimy w config modemu wybieramy DSL i widzimy że pt nam podpowiada Modem4 <-> Ethernet6
+
+Następnie nalezy skonfigurować router Remote-1
+Ustawiamy ip i maskę podsieci (192.168.8.1 255.255.255.0), następnie robimy dhcp pool
+
+```txt
+z poziomu config
+
+ip dhcp pool REMOTE_POOL
+
+network 192.168.8.0 255.255.255.0
+
+default-router 192.168.8.1
+
+ctrl-z
+
+wpisujemy wr
+```
+
+Wbijamy w komputer pracownika, wybieramy desktop i potem ip configuration, klikamy dhcp i widzimy że dostał adres ip
+
+### VPN
+
+Wchodzimy w Remote-1, wpisujemy conf t, a następnie ustawiamy AAA.
+
+```txt
+aaa new-model 
+
+aaa authentication login REMOTE local
+aaa authorization network REMOTE local
+
+username VPN secret supersecure
+```
+
+Te powyższe powodują że nasze uwierzytelnienie nastąpi z lokalnym username w routerze
+
+```txt
+i mimo zmiany routera na nowszy nie działa poniższe polecenie
+
+crypto isakmp policy 10
+
+```
+
+No ale dobra pomimo że nie da sie skonfigurowac tak jak powinno to w skrócie
+Robimy grupę vpn, w desktopie usera wpisujemy potrzebne dane, i wtedy pojawiłby się nam tunel którym mamy dostęp do sieci w naszej firmie 
