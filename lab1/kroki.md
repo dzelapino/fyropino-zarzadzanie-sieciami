@@ -104,7 +104,7 @@ Mamy dwa zespoły Developers-3 i Developers-2
 
 ## Komunikacja
 
-Biuro może komunikować się z każdym z zespołów (Każdy zespół zna ścieżkę do biura i biuro do każdego). Zespoły nie mogą się ze sobą komunikować, jedynym wyjątkiem są zespoły dev1 i dev2, dev1 jest podpięty do routera bezprzewodowego który należy do sieci routera dev2.
+Biuro może komunikować się z każdym z zespołów (Każdy zespół zna ścieżkę do biura i biuro do każdego). Zespoły nie mogą się ze sobą komunikować, jedynym wyjątkiem są zespoły dev1, dev2 i dev3, dev1 jest podpięty do routera bezprzewodowego który należy do sieci routera dev2.
 
 ## Remote access
 
