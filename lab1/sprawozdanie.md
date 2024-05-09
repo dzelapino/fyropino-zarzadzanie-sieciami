@@ -43,3 +43,10 @@ Powyższa topologia zostanie wdrożona do firmy na podstawie szczegółwoego pla
 
  3. Implementacja VPN
  Implementacja VPN jest niestety niemożliwa w wersji Packet Tracer 8.2.x. Jest jednak niezbędna, pownieważ umożliwi pracownikom firmowym bezpieczny zdalny dostęp do zasobów sieciowych, nawet spoza biura, poprzez szyfrowane połączenia. Będzie wymagała odpowiedniej konfiguracji zarówno na poziomie serwerów VPN, jak i klientów, w celu zapewnienia bezpieczeństwa transmisji danych oraz uwierzytelnienia użytkowników. Po wdrożeniu VPN firma będzie mogła monitorować ruch sieciowy związany z połączeniami VPN oraz zarządzać nimi w sposób efektywny, np. poprzez ograniczenie dostępu do określonych zasobów tylko dla uprawnionych użytkowników.
+
+ ## Podsumowanie
+ Projekt modernizacji sieci firmy XYZ ma na celu usprawnienie infrastruktury sieciowej i zwiększenie bezpieczeństwa dostępu do zasobów. 
+ 
+ Poprzez segmentację sieci na podsieci dla różnych zespołów oraz wybór topologii gwiazdy, firma zyskuje elastyczność, łatwiejsze zarządzanie i szybsze rozwiązywanie problemów.Aktualizacja sprzętu sieciowego, w tym routerów i przełączników o większej przepustowości, zwiększa wydajność sieci i obsługę rosnącej liczby użytkowników. Wdrożenie usługi VPN umożliwia bezpieczny zdalny dostęp do zasobów sieciowych. Zabezpieczenia sieci, takie jak zapory sieciowe, systemy antywirusowe oraz monitoring ruchu, poprawiają bezpieczeństwo i umożliwiają bieżące wykrywanie zagrożeń.
+
+Dzięki tym działaniom firma zyskuje lepszą efektywność pracy, zwiększa bezpieczeństwo danych i jest gotowa na przyszłe zmiany i rozwój biznesu.
